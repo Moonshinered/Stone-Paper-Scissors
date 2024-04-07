@@ -6,7 +6,7 @@ class Program
     {
         Console.WriteLine("Hello World!");
         Random rand = new Random();
-        string[] array = { "Stone", "Scissors", "Paper" };
+        string[] array = { "stone", "scissors", "paper" };
         Console.WriteLine("Please select the command:");
         Console.WriteLine("Stone");
         Console.WriteLine("Scissors");
@@ -14,8 +14,9 @@ class Program
         for (int x = 0; x < 5; x++)
         {
             Console.WriteLine();
-            Console.Write("> ");
+            Console.Write("> "); 
             string input = Console.ReadLine();
+            input = input.ToLower();
             int userInput = -1;
 
             for (int i = 0; i < array.Length; i++)
